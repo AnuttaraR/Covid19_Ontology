@@ -1,4 +1,4 @@
-# Covid19_Ontology
+# Covid-19 RDF OWL Ontology
 
 This XML ontology knowledge base was created to spread the awareness to the general public about the coronavirus, infection possibilities, precautions and symptoms of the disease.
 The scope is divided into 4 main aspects, ‘about’, ‘how infections are spread’, ‘precautions’, and ‘symptoms’.

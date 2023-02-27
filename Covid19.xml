@@ -1,0 +1,558 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<!-- OWL Header : THING -->
+<owl:Ontology rdf:about="http://www.example.com/covid19">
+    <dc:title>Covid 19 ontology</dc:title>
+    <dc:description>An Ontology focused on the covid 19 virus</dc:description>
+</owl:Ontology>
+
+
+<!-- Defining Properties -->
+
+<!-- Owl Property Definition - isASymptomOf -->
+<owl:DatatypeProperty rdf:about="http://www.example.com/covid19#isASymptomOf"/>
+
+<!-- Owl Property Definition - isAPrecautionFor -->
+<owl:DatatypeProperty rdf:about="http://www.example.com/covid19#isAPrecautionFor"/>
+
+<!-- Owl Property Definition - isAnInfectionMethodFor -->
+<owl:DatatypeProperty rdf:about="http://www.example.com/covid19#isAnInfectionMethodFor"/>
+
+<!-- Owl Property Definition - isAVaccineFor -->
+<owl:DatatypeProperty rdf:about="http://www.example.com/covid19#isAVaccineFor"/>
+
+
+
+
+
+<!-- Defining Classes -->
+
+
+<!-- About Branch -->
+
+<!-- OWL Class Definition - About -->
+<owl:Class rdf:about="http://www.example.com/covid19#about">
+
+    <!-- About is a subclass of Thing -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#covid19"/>
+
+    <rdfs:label>About</rdfs:label>
+    <rdfs:comment>The class about covid 19</rdfs:comment>
+
+</owl:Class>
+
+
+<!-- OWL Class Definition - Varients -->
+<owl:Class rdf:about="http://www.example.com/covid19#varients">
+
+    <!-- Varients is a subclass of About -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#about"/>
+
+    <rdfs:label>Varients</rdfs:label>
+    <rdfs:comment>The varients of covid 19</rdfs:comment>
+
+</owl:Class>
+
+<!-- OWL Class Definition - AtRisk -->
+<owl:Class rdf:about="http://www.example.com/covid19#atrisk">
+
+    <!-- AtRisk is a subclass of About -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#about"/>
+
+    <rdfs:label>At Risk</rdfs:label>
+    <rdfs:comment>The people at a higher risk of infection</rdfs:comment>
+
+</owl:Class>
+
+<!-- OWL Class Definition - Tests -->
+<owl:Class rdf:about="http://www.example.com/covid19#tests">
+
+    <!-- Tests is a subclass of About -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#about"/>
+
+    <rdfs:label>Tests</rdfs:label>
+    <rdfs:comment>The available tests to detect covid 19</rdfs:comment>
+
+</owl:Class>
+
+<!-- OWL Class Definition - Treatments -->
+<owl:Class rdf:about="http://www.example.com/covid19#treatments">
+
+    <!-- Treatments is a subclass of About -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#about"/>
+
+    <rdfs:label>Treatments</rdfs:label>
+    <rdfs:comment>The available treatments to cure covid 19 patients</rdfs:comment>
+
+</owl:Class>
+
+
+
+
+<!-- Precautions Branch -->
+
+<!-- OWL Class Definition - Precautions -->
+<owl:Class rdf:about="http://www.example.com/covid19#precautions">
+
+    <!-- Precautions is a subclass of Thing -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#covid19"/>
+
+    <rdfs:label>Precautions</rdfs:label>
+    <rdfs:comment>The class of all precautions to be taken</rdfs:comment>
+
+</owl:Class>
+
+<!-- OWL Class Definition - Vaccine -->
+<owl:Class rdf:about="http://www.example.com/covid19#vaccine">
+
+    <!-- Vaccine is a subclass of Precautions -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#precautions"/>
+
+    <rdfs:label>Vaccine</rdfs:label>
+    <rdfs:comment>The available vaccines for covid 19</rdfs:comment>
+
+</owl:Class>
+
+
+
+<!-- How Infections Spread Branch -->
+
+<!-- OWL Class Definition - HowInfectionsSpread -->
+<owl:Class rdf:about="http://www.example.com/covid19#howinfectionsspread">
+
+    <!-- HowInfectionsSpread is a subclass of Thing -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#covid19"/>
+
+    <rdfs:label>How Infections Spread</rdfs:label>
+    <rdfs:comment>The class of how infections can be spread among people</rdfs:comment>
+
+</owl:Class>
+
+
+
+
+<!-- Symptoms Branch -->
+
+<!-- OWL Class Definition - Symptoms -->
+<owl:Class rdf:about="http://www.example.com/covid19#symptoms">
+
+    <!-- Symptoms is a subclass of Thing -->
+    <rdfs:subClassOf rdf:resource="http://www.example.com/covid19#covid19"/>
+
+    <rdfs:label>Symptoms</rdfs:label>
+    <rdfs:comment>The class of symptoms for covid 19</rdfs:comment>
+
+</owl:Class>
+
+
+
+
+<!-- Defining instances in the ontology -->
+
+
+<!-- For At Risk -->
+
+<!-- Define the Elders class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#elders">
+
+    <!-- Elders is an individual of the AtRisk class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#atrisk"/>
+
+</rdf:Description>
+
+<!-- Define the HighBP class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#highbp">
+
+    <!-- HIghBP is an individual of the AtRisk class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#atrisk"/>
+
+</rdf:Description>
+
+<!-- Define the HeartProblems class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#heartproblems">
+
+    <!-- HeartProblems is an individual of the AtRisk class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#atrisk"/>
+
+</rdf:Description>
+
+<!-- Define the LungProblems class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#lungproblems">
+
+    <!-- LungProblems is an individual of the AtRisk class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#atrisk"/>
+
+</rdf:Description>
+
+
+
+<!-- For Tests -->
+
+<!-- Define the PCR class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#PCR">
+
+    <!-- PCR is an individual of the Tests class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#tests"/>
+
+</rdf:Description>
+
+<!-- Define the RDT class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#RDT">
+
+    <!-- RDT is an individual of the Tests class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#tests"/>
+
+</rdf:Description>
+
+
+
+<!-- For Treatments -->
+
+<!-- Define the Oxygen class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#oxygen">
+
+    <!-- Oxygen is an individual of the Treatments class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#treatments"/>
+
+</rdf:Description>
+
+<!-- Define the Dexamethasone class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#dexamethasone">
+
+    <!-- Dexamethasone is an individual of the Treatments class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#treatments"/>
+
+</rdf:Description>
+
+
+
+<!-- For How Infections Spread -->
+
+<!-- Define the Coughing class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#coughing">
+
+    <!-- Coughing is an individual of the HowInfectionsSpread class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#howinfectionsspread"/>
+
+</rdf:Description>
+
+<!-- Define the Sneezing class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#sneezing">
+
+    <!-- Sneezing is an individual of the HowInfectionsSpread class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#howinfectionsspread"/>
+
+</rdf:Description>
+
+<!-- Define the Speaking class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#speaking">
+
+    <!-- Speaking is an individual of the HowInfectionsSpread class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#howinfectionsspread"/>
+
+</rdf:Description>
+
+<!-- Define the Breathing class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#breathing">
+
+    <!-- Breathing is an individual of the HowInfectionsSpread class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#howinfectionsspread"/>
+
+</rdf:Description>
+
+
+
+<!-- For Precautions -->
+
+<!-- Define the WearMasks class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#wearmasks">
+
+    <!-- WearMasks is an individual of the Precautions class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#precautions"/>
+
+</rdf:Description>
+
+<!-- Define the WashHands class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#washhands">
+
+    <!-- WashHands is an individual of the Precautions class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#precautions"/>
+
+</rdf:Description>
+
+<!-- Define the LimitTravel class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#limittravel">
+
+    <!-- LimitTravel  is an individual of the Precautions class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#precautions"/>
+
+</rdf:Description>
+
+
+
+<!-- For Vaccines -->
+
+<!-- Define the Pfizer class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#pfizer">
+
+    <!-- Pfizer is an individual of the Vaccines class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#vaccines"/>
+
+</rdf:Description>
+
+<!-- Define the Astrazeneca class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#astrazeneca">
+
+    <!-- Astrazeneca is an individual of the Vaccines class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#vaccines"/>
+
+</rdf:Description>
+
+<!-- Define the Janssen class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#janssen">
+
+    <!-- Janssen is an individual of the Vaccines class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#vaccines"/>
+
+</rdf:Description>
+
+<!-- Define the Moderna class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#moderna">
+
+    <!-- Moderna is an individual of the Vaccines class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#vaccines"/>
+
+</rdf:Description>
+
+<!-- Define the Sinopharm class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#sinopharm">
+
+    <!-- Sinopharm is an individual of the Vaccines class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#vaccines"/>
+
+</rdf:Description>
+
+
+
+<!-- For Symptoms -->
+
+<!-- Define the Fever class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#fever">
+
+    <!-- Fever is an individual of the Symptoms class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#symptoms"/>
+
+</rdf:Description>
+
+<!-- Define the DryCough class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#drycough">
+
+    <!-- DryCough is an individual of the Symptoms class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#symptoms"/>
+
+</rdf:Description>
+
+<!-- Define the Fatigue class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#fatigue">
+
+    <!-- Fatigue is an individual of the Symptoms class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#symptoms"/>
+
+</rdf:Description>
+
+<!-- Define the LossOfTaste class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#lossoftaste">
+
+    <!-- LossOfTaste is an individual of the Symptoms class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#symptoms"/>
+
+</rdf:Description>
+
+<!-- Define the SoreThroat class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#sorethroat">
+
+    <!-- SoreThroat is an individual of the Symptoms class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#symptoms"/>
+
+</rdf:Description>
+
+<!-- Define the Headache class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#headache">
+
+    <!-- Headache is an individual of the Symptoms class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#symptoms"/>
+
+</rdf:Description>
+
+
+
+
+<!-- Defining the properties for each covid varient -->
+
+<!-- For the Delta varient -->
+
+<!-- Define the Delta class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#delta">
+
+    <!-- Delta is an individual of the varient class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#varients"/>
+
+    <!-- Delta has symptoms of headache -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#headache"/>
+
+    <!-- Delta has symptoms of sore throat -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#sorethroat"/>
+
+    <!-- Delta has symptoms of fever -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#fever"/>
+
+    <!-- Delta can take precaution of wearing mask -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#wearmask"/>
+
+    <!-- Delta can take precaution of washing hands -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#washhands"/>
+
+    <!-- Delta is treated with the vaccine Astrazeneca -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#astrazeneca"/>
+
+    <!-- Delta is treated with the vaccine Pfizer -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#pfizer"/>
+
+    <!-- Delta is treated with the vaccine Moderna -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#moderna"/>
+
+    <!-- Delta is spread by coughing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#coughing"/>
+
+    <!-- Delta is spread by breathing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#breathing"/>
+
+</rdf:Description>
+
+
+
+<!-- Define the Omicron class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#omicron">
+
+    <!-- Omicron is an individual of the varient class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#varients"/>
+
+    <!-- Omicron has symptoms of drycough -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#drycough"/>
+
+    <!-- Omicron has symptoms of fever -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#fever"/>
+
+    <!-- Omicron has symptoms of fatigue -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#fatigue"/>
+
+    <!-- Omicron has symptoms of lossoftaste -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#lossoftaste"/>
+
+    <!-- Omicron can take precaution of wearing mask -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#wearmask"/>
+
+    <!-- Omicron can take precaution of limiting travel -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#limittravel"/>
+
+    <!-- Omicron is treated with the vaccine Astrazeneca -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#astrazeneca"/>
+
+    <!-- Omicron is treated with the vaccine Moderna -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#moderna"/>
+
+    <!-- Omicron is spread by coughing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#coughing"/>
+
+    <!-- Omicron is spread by sneezing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#sneezing"/>
+
+</rdf:Description>
+
+
+
+<!-- Define the Alpha class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#alpha">
+
+    <!-- Alpha is an individual of the varient class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#varients"/>
+
+    <!-- Alpha has symptoms of lossoftaste -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#lossoftaste"/>
+
+    <!-- Alpha has symptoms of headache -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#headache"/>
+
+    <!-- Alpha can take precaution of wearing mask -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#wearmask"/>
+
+    <!-- Alpha can take precaution of washing hands -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#washhands"/>
+
+    <!-- Alpha is treated with the vaccine Pfizer -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#pfizer"/>
+
+    <!-- Alpha is treated with the vaccine Astrazeneca -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#astrazeneca"/>
+
+    <!-- Alpha is spread by coughing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#coughing"/>
+
+    <!-- Alpha is spread by sneezing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#sneezing"/>
+
+    <!-- Alpha is spread by speaking -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#speaking"/>
+
+    <!-- Alpha is spread by breathing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#breathing"/>
+
+</rdf:Description>
+
+
+
+<!-- Define the Beta class instance -->
+<rdf:Description rdf:about="http://www.example.com/covid19#beta">
+
+    <!-- Beta is an individual of the varient class -->
+    <rdf:type rdf:resource="http://www.example.com/covid19#varients"/>
+
+    <!-- Beta has symptoms of fever -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#fever"/>
+
+    <!-- Beta has symptoms of sore throat -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#sorethroat"/>
+
+    <!-- Beta has symptoms of loss of taste -->
+    <owl:isASymptomOf rdf:resource="http://www.example.com/covid19#lossoftaste"/>
+
+    <!-- Beta can take precaution of wearing mask -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#wearmask"/>
+
+    <!-- Beta can take precaution of limiting travel -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#limittravel"/>
+
+    <!-- Beta can take precaution of washing hands -->
+    <owl:isAPrecautionFor rdf:resource="http://www.example.com/covid19#washhands"/>
+
+    <!-- Beta is treated with the vaccine Pfizer -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#pfizer"/>
+
+    <!-- Beta is treated with the vaccine Moderna -->
+    <owl:isAVaccineFor rdf:resource="http://www.example.com/covid19#moderna"/>
+
+    <!-- Beta is spread by coughing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#coughing"/>
+
+    <!-- Beta is spread by sneezing -->
+    <owl:isAnInfectionMethodFor rdf:resource="http://www.example.com/covid19#sneezing"/>
+
+</rdf:Description>
+
+</rdf:RDF>
